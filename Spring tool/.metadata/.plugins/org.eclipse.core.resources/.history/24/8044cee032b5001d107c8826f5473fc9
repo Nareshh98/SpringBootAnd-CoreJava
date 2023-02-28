@@ -1,0 +1,26 @@
+package com.healthycoderapp.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class AcitvityCalculaterTest {
+
+	@Test
+	void Should_ReturnBad_When_AvgBelow20() {
+		
+		
+	}
+	@Test
+	void Should_ReturnAverage_When_AvgBelow20And40() {
+		
+		
+	}
+	@Test
+	void Should_Returngood_When_AvgBelow40() {
+		
+		
+	}
+
+
+}

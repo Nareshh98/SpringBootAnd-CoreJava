@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BMICalculatorTest.should_returnCoderwithworstBMI_When_CoderListNotEmpty" project="HealthyCoderApp" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.healthycoderapp.test.BMICalculatorTest" time="0.024" displayname="BMICalculatorTest" uniqueid="[engine:junit-jupiter]/[class:com.healthycoderapp.test.BMICalculatorTest]">
+    <testcase name="should_returnCoderwithworstBMI_When_CoderListNotEmpty" classname="com.healthycoderapp.test.BMICalculatorTest" time="0.024" displayname="should_returnCoderwithworstBMI_When_CoderListNotEmpty()" uniqueid="[engine:junit-jupiter]/[class:com.healthycoderapp.test.BMICalculatorTest]/[method:should_returnCoderwithworstBMI_When_CoderListNotEmpty()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test05ThrowingException" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test05ThrowingException" time="0.467" displayname="Test05ThrowingException" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test05ThrowingException]">
+    <testcase name="should_throwException_NoRoomAvailable" classname="com.mockitotutorial.happyhotel.booking.Test05ThrowingException" time="0.467" displayname="should_throwException_NoRoomAvailable()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test05ThrowingException]/[method:should_throwException_NoRoomAvailable()]"/>
+  </testsuite>
+</testrun>

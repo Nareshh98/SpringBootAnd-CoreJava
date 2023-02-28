@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BMICalculatorTest.should_returnTrue_when_DieteRecommended" project="HealthyCoderApp" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.healthycoderapp.test.BMICalculatorTest" time="0.001" displayname="BMICalculatorTest" uniqueid="[engine:junit-jupiter]/[class:com.healthycoderapp.test.BMICalculatorTest]">
+    <testcase name="should_returnTrue_when_DieteRecommended" classname="com.healthycoderapp.test.BMICalculatorTest" time="0.001" displayname="should_returnTrue_when_DieteRecommended()" uniqueid="[engine:junit-jupiter]/[class:com.healthycoderapp.test.BMICalculatorTest]/[method:should_returnTrue_when_DieteRecommended()]"/>
+  </testsuite>
+</testrun>

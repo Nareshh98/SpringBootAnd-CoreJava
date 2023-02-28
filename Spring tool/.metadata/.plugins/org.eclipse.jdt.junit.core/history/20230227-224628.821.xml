@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test06Matchers.should_NotCompleteBooking_when_PriceTooHigh" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test06Matchers" time="0.493" displayname="Test06Matchers" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test06Matchers]">
+    <testcase name="should_NotCompleteBooking_when_PriceTooHigh" classname="com.mockitotutorial.happyhotel.booking.Test06Matchers" time="0.493" displayname="should_NotCompleteBooking_when_PriceTooHigh()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test06Matchers]/[method:should_NotCompleteBooking_when_PriceTooHigh()]"/>
+  </testsuite>
+</testrun>

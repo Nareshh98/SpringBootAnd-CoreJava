@@ -1,0 +1,25 @@
+package com.healthycoderapp.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import com.healthycoderapp.DietPlanner;
+
+class DietPlannerTest {
+	
+	DietPlanner dietPlanner;
+	
+	@BeforeEach
+	void method() {
+	
+	dietPlanner= new DietPlanner(20,30,50);
+	}
+
+	@Test
+	void test() {
+		
+	}
+
+}

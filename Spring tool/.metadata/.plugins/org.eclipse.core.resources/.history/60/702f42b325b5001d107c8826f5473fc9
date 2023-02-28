@@ -1,0 +1,68 @@
+package com.healthycoderapp.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.Test;
+
+import com.healthycoderapp.Coder;
+import com.healthycoderapp.DietPlan;
+import com.healthycoderapp.DietPlanner;
+import com.healthycoderapp.Gender;
+
+class DietPlannerTest {
+	
+	DietPlanner dietPlanner;
+	
+	@BeforeEach
+	void method() {
+	
+	dietPlanner= new DietPlanner(20,30,50);
+// this.dietPlanner= new DietPlanner(20,30,50);
+	}
+	@BeforeAll
+	static void beforeAll() { // should be static
+		System.out.println("before All");
+	}
+	@AfterAll
+	static void AfterAll() { // should be static
+		System.out.println("After All");
+	}
+
+	@Test
+	void Should_ReturnCorrectDietPlan_When_CorrectCoder1() {
+		//given 
+		Coder coder= new Coder(1.82,75.0,26,Gender.MALE);
+		DietPlan exepted= new DietPlan(2202,110,73,275);
+		// when
+		
+		DietPlan actual =dietPlanner.calculateDiet(coder); 
+		// then
+		assertAll(
+				()->assertEquals(exepted.getCalories(), actual.getCalories()),
+				()->assertEquals(exepted.getProtein(), actual.getProtein()),
+				()->assertEquals(exepted.getFat(), actual.getFat()),
+				()->assertEquals(exepted.getCarbohydrate(), actual.getCarbohydrate())
+				);		
+	}
+	@RepeatedTest(10)
+	void Should_ReturnCorrectDietPlan_When_CorrectCoder2() {
+		//given 
+		Coder coder= new Coder(1.82,75.0,26,Gender.MALE);
+		DietPlan exepted= new DietPlan(2202,110,73,275);
+		// when
+		
+		DietPlan actual =dietPlanner.calculateDiet(coder); 
+		// then
+		assertAll(
+				()->assertEquals(exepted.getCalories(), actual.getCalories()),
+				()->assertEquals(exepted.getProtein(), actual.getProtein()),
+				()->assertEquals(exepted.getFat(), actual.getFat()),
+				()->assertEquals(exepted.getCarbohydrate(), actual.getCarbohydrate())
+				);		
+	}
+
+}

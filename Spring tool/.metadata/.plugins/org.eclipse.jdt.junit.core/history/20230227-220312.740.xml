@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test04DefaultMultipleThenReturnCalls.should_countAvaliablePlaces_when_calledMultipleTimes" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test04DefaultMultipleThenReturnCalls" time="0.55" displayname="Test04DefaultMultipleThenReturnCalls" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test04DefaultMultipleThenReturnCalls]">
+    <testcase name="should_countAvaliablePlaces_when_calledMultipleTimes" classname="com.mockitotutorial.happyhotel.booking.Test04DefaultMultipleThenReturnCalls" time="0.55" displayname="should_countAvaliablePlaces_when_calledMultipleTimes()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test04DefaultMultipleThenReturnCalls]/[method:should_countAvaliablePlaces_when_calledMultipleTimes()]"/>
+  </testsuite>
+</testrun>

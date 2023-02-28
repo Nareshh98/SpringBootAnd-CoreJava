@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Technical Assessment</title>
+<style>
+body {background:rgb(238, 212, 212);}
+.main {text-align:center;margin:0 auto;width:50%;}
+</style>
+</head>
+<body>
+<div class="main">
+<h1>Technical Assessment registration</h1>
+<form name="add" action="/addTechnicalData" method="POST">
+<table border="1">
+ 
+<tr><td>userId</td><td><input type="text" name="userId" required/></td></tr>
+<tr><td>assessment</td><td><select id="subject" name="subject">
+<option value="Java">Java</option>
+<option value="C#">C#</option>
+<option value="PHP">PHP</option>
+<option value="PERL">PERL</option>
+</select></td></tr>
+<tr><td>Date</td><td><input type="Date" id="assDate" name="assDate"></tr>
+ 
+<tr><td>type</td><td><select id="type" name="type">
+<option value="Technical">Technical</option> 
+</td></tr>
+<tr><td colspan="2"><input type="submit" name="submit" value="submit"/></td></tr> 
+</table>
+</form>
+</div>
+</body>
+</html>

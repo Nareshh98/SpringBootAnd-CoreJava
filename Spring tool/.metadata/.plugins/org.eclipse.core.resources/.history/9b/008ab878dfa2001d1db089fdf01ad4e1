@@ -1,0 +1,63 @@
+package com.jpa.repository;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.Optional;
+
+import org.assertj.core.api.OptionalAssert;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
+import com.jpa.entity.Course;
+
+@DataJpaTest
+class CourseRepositoryTest {
+	
+	
+/*
+ @SpringBootTest is a general-purpose test annotation that is used to bootstrap the full Spring context for testing.
+  It loads the complete application context and provides access to all the components and services defined in the application.
+  This makes it possible to test the application end-to-end, including interactions between components.
+
+@DataJpaTest, on the other hand, is a more specialized test annotation that focuses on testing JPA (Java Persistence API) and database related components.
+ It is used to test the interaction between the application and a relational database.
+  When used, the test context only includes the components necessary for testing JPA and databases, 
+  such as the EntityManager, DataSource, and the JPA repositories.
+
+In general, @DataJpaTest is faster and more focused than @SpringBootTest, 
+as it loads only the components necessary for testing JPA and databases. 
+This makes it a good choice for testing the persistence layer of a Spring Boot application.
+ @SpringBootTest, on the other hand, is more comprehensive and can be used to test the complete application end-to-end,
+  including interactions between components          */
+
+	
+	@Autowired
+	CourseRepository courseRepository;
+	
+	@BeforeEach
+	void Allmethods() {
+		Course cour=new Course(100L,"Naresh"); 
+		courseRepository.save(cour);
+		
+	}
+	
+	@Test
+	void SaveCourse() {
+		
+		Course CourseSave= courseRepository.findById(cour.getId().get());
+		 assertThat(CourseSave.getName()).isEqualTo("Naresh");
+		 assertThat(CourseSave.getId()).isEqualTo(100L);
+     }
+	@Test
+	void FindById() {
+		
+		Optional<Course> cour=courseRepository.findById((long) 100));
+		
+		assertEquals("Naresh",cour.);
+		
+	}
+
+}

@@ -1,0 +1,19 @@
+package com.mockitotutorial.happyhotel.booking;
+
+import org.junit.jupiter.api.*;
+
+class Test01FirstMocks {
+	
+	private BookingService bookingService;
+	
+	@BeforeEach
+	void Setup() {
+		this.bookingService = new 
+	}
+
+	@Test
+	void test() {
+		
+	}
+
+}

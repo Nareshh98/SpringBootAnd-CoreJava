@@ -1,0 +1,19 @@
+# to enable h2 data base
+spring.h2.console.enabled=true
+#spring.datasource.url=jdbc:h2:mem:testdb
+#spring.datasource.url=jdbc:mysql://localhost:3306/jpa
+spring.datasource.username=root
+spring.datasource.password=Abcd1234@
+# to see bsckend of hibernate (or) statistics on
+spring.jpa.properties.hibernate.generate_statistics=true
+
+logging.level.org.hibernate.stat=debug
+
+#for mate queries
+# dont not enable when production
+spring.jpa.properties.hibernate.formate_sql=true
+#show all queries
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=create
+
+logging.level.org.hibernate.type=trace

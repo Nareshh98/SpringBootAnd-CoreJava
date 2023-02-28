@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test01FirstMocks.should_calculateCorrectPrice_when_CorrectInput" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test01FirstMocks" time="0.623" displayname="Test01FirstMocks" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test01FirstMocks]">
+    <testcase name="should_calculateCorrectPrice_when_CorrectInput" classname="com.mockitotutorial.happyhotel.booking.Test01FirstMocks" time="0.623" displayname="should_calculateCorrectPrice_when_CorrectInput()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test01FirstMocks]/[method:should_calculateCorrectPrice_when_CorrectInput()]"/>
+  </testsuite>
+</testrun>

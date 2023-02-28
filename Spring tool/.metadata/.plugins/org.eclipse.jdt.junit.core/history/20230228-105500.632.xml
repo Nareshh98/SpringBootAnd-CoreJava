@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test08Spies" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test08Spies" time="0.545" displayname="Test08Spies" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test08Spies]">
+    <testcase name="should_MakeBooking_when_InpuyOk" classname="com.mockitotutorial.happyhotel.booking.Test08Spies" time="0.545" displayname="should_MakeBooking_when_InpuyOk()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test08Spies]/[method:should_MakeBooking_when_InpuyOk()]"/>
+  </testsuite>
+</testrun>

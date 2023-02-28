@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test07VerifyingBehaviour.should_InvokePayment_when_prepaid" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test07VerifyingBehaviour" time="0.522" displayname="Test07VerifyingBehaviour" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test07VerifyingBehaviour]">
+    <testcase name="should_InvokePayment_when_prepaid" classname="com.mockitotutorial.happyhotel.booking.Test07VerifyingBehaviour" time="0.522" displayname="should_InvokePayment_when_prepaid()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test07VerifyingBehaviour]/[method:should_InvokePayment_when_prepaid()]"/>
+  </testsuite>
+</testrun>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="ISO-8859-1">
+    <title>Login</title>
+    <style type="text/css">
+body {
+    background-color: rgb(200, 100, 100);
+}
+
+form {
+    align: center;
+}
+</style>
+    <div align=center>
+        <h2>Admin login sucessfully</h2>
+    </div>
+</head>
+<body>
+<div align=center>
+    <h1>Customer Account Form</h1>
+</div>
+<div align=center>
+    <form action=CustomerAccount method=post>
+        <table>
+            <tr>
+                <td>Full Name:</td>
+                <td><input type="text" name="fullName"
+                           placeholder="Enter Full Name"></td>
+            </tr>
+            <tr>
+                <td>Father's Name:</td>
+                <td><input type="text" name="fatherName"
+                           placeholder="Enter Father's Name"></td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date" name="dob" placeholder="Enter DOB"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td><select name="gender">
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Third gender</option>
+                </select></td>
+            </tr>
+            <!-- <tr>
+                <td>Gender:</td>
+                <td><input type="radio" name="gender">Male <input
+                    type="radio" name="gender">Female</td>
+            </tr> -->
+            <tr>
+                <td>Permanent Address:</td>
+                <td><input type="text" name="permanentAdd"
+                           placeholder="Enter Permanent Address"></td>
+            </tr>
+            <tr>
+                <td>Present Address</td>
+                <td><input type="text" name="presentAdd"
+                           placeholder="Enter Present Address"></td>
+            </tr>
+            <tr>
+                <td>PAN Number:</td>
+                <td><input type="number" name="pan"
+                           placeholder="Enter PAN Number"></td>
+            </tr>
+            <tr>
+                <td>Mobile:</td>
+                <td><input type="tel" name="mobile"
+                           placeholder="Enter Mobile Number"></td>
+            </tr>
+            <tr>
+                <td>LandLine Number:</td>
+                <td><input type="tel" name="landLine"
+                           placeholder="Enter LandLine Number"></td>
+            </tr>
+            <tr>
+                <td>Account Number:</td>
+                <td><input type="number" name="AccountNumber"
+                           placeholder="Enter Account Number"></td>
+            </tr>
+            <tr>
+                <td>Account Type:</td>
+                <td><input type="text" name="accType"
+                           placeholder="Enter Account Type"></td>
+            </tr>
+            <tr>
+                <td>Opening Balance:</td>
+                <td><input type="number" name="openBal"
+                           placeholder="Enter Opening Amount"></td>
+            </tr>
+            <tr>
+                <td>Customer Id:</td>
+                <td><input type="number" name="customerId"
+                           placeholder="Enter Customer Id"></td>
+            </tr>
+            <!--                 <tr>
+                <td>Account Number:</td>
+                <td><input type="number" name="accNo"
+                    placeholder="Enter Account Number"></td>
+            </tr> -->
+            <tr>
+                <td>Card Number:</td>
+                <td><input type="number" name="cardNumber"
+                           placeholder="Enter Card Number"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><input type="submit" value="submit"> <input
+                        type="reset" value="Reset"></td>
+
+            </tr>
+
+        </table>
+    </form>
+</div>
+</body>
+</html>

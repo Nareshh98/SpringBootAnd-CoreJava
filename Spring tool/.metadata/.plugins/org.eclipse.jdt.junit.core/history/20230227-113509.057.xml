@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test03DefaultReturingCustomValues.should_countAvaliablePlaces_when_OneRoomAvailable" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test03DefaultReturingCustomValues" time="0.551" displayname="Test03DefaultReturingCustomValues" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test03DefaultReturingCustomValues]">
+    <testcase name="should_countAvaliablePlaces_when_OneRoomAvailable" classname="com.mockitotutorial.happyhotel.booking.Test03DefaultReturingCustomValues" time="0.551" displayname="should_countAvaliablePlaces_when_OneRoomAvailable()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test03DefaultReturingCustomValues]/[method:should_countAvaliablePlaces_when_OneRoomAvailable()]"/>
+  </testsuite>
+</testrun>

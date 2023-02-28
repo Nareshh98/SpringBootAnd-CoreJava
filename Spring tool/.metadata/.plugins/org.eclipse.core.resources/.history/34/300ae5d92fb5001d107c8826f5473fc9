@@ -1,0 +1,213 @@
+package com.healthycoderapp.test;
+
+import static org.junit.Assert.assertThrows;
+import static org.junit.Assume.assumeTrue;
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.OS;
+import org.junit.jupiter.api.function.Executable;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import com.healthycoderapp.BMICalculator;
+import com.healthycoderapp.Coder;
+
+class BMICalculatorTest {
+
+	private String environment="dev";  //prod
+	
+	 @Nested
+	 @DisplayName("{{}} same inner class Display name")
+	class IsDietRecommendedTests{
+		 
+		 @Test
+		 @DisplayName(">>>sample method name")
+		 @DisabledOnOs(OS.WINDOWS)
+			void should_returnTrue_when_DieteRecommended1() {
+				// given
+				double weight=89.0;
+				double height=1.72;
+				// when
+				boolean recommended=BMICalculator.isDietRecommended(weight, height);
+				
+				// then
+				assertTrue(recommended);
+				
+			}   
+		    @DisabledOnOs(OS.WINDOWS)
+			@ParameterizedTest
+			@ValueSource(doubles = {89.0,95.0,110.0}) // only for weight
+			void should_returnTrue_when_DieteRecommended2(Double codeweight) {
+				// given
+				double weight=codeweight;
+				double height=1.72;
+				// when
+				boolean recommended=BMICalculator.isDietRecommended(weight, height);
+				
+				// then
+				assertTrue(recommended);
+				
+			}                  
+			 
+			@ParameterizedTest(name="weight={0},height={1}")
+			@CsvSource(value = {"89.0,1.72","95.0,1.75","110.0,1.78"})  // for Both
+			void should_returnTrue_when_DieteRecommended3(Double codeweight,Double codeHeight) {
+				// given
+				double weight=codeweight;
+				double height=codeHeight;
+				// when
+				boolean recommended=BMICalculator.isDietRecommended(weight, height);
+				
+				// then
+				assertTrue(recommended);
+				
+			}  
+			@ParameterizedTest(name="weight={0},height={1}")
+			@CsvFileSource(resources="/diet-recommended-input-data.csv",numLinesToSkip = 1)
+			void should_returnTrue_when_DieteRecommended4(Double codeweight,Double codeHeight) {
+				// given
+				double weight=codeweight;
+				double height=codeHeight;
+				// when
+				boolean recommended=BMICalculator.isDietRecommended(weight, height);
+				
+				// then
+				assertTrue(recommended);
+				
+			}  		
+	}
+	
+	 @Nested
+		class FindCoderWithWorstBMI{
+		 
+		 @Test
+			void should_returnFalse_when_DieteNotRecommended() {
+				// given
+				double weight=50.0;
+				double height=1.72;
+				// when
+				boolean recommended=BMICalculator.isDietRecommended(weight, height);
+				
+				// then
+				assertFalse(recommended);	
+			}
+			@Test
+			void should_throwError_when_HeightZero() {
+				// given
+				double weight=50.0;
+				double height=0.00;
+				// when
+				Executable executable=()->BMICalculator.isDietRecommended(weight, height);
+				
+				// then
+				assertThrows(ArithmeticException.class,executable);	
+			}
+			@Test
+			void should_returnCoderwithworstBMI_When_CoderListNotEmpty() {
+				// given
+				List<Coder> coders=new ArrayList<>();
+				coders.add(new Coder(1.80,60.0));
+				coders.add(new Coder(1.82,98.0));
+				coders.add(new Coder(1.82,64.7));
+
+				// when
+		     Coder coderWorstBMI=BMICalculator.findCoderWithWorstBMI(coders);
+				// then
+		     assertAll(
+		    		 
+		     ()->assertEquals(1.82, coderWorstBMI.getHeight()),
+		     ()->assertEquals(98.0, coderWorstBMI.getWeight())
+		        );
+		     
+			}
+			
+			@Test
+			void should_ReturnCoderWithWorstBMIInMs_When_coderListHas10000Elements() {
+				
+				// given
+				List<Coder> coders=new ArrayList<>();
+				
+				for(int i=0;i<=10000;i++) {
+					
+				coders.add(new Coder(1.0+i, 10+i));
+				}
+				// when
+				Executable excutable=()->BMICalculator.findCoderWithWorstBMI(coders);
+				
+				// then
+				assertTimeout(Duration.ofMillis(500), excutable);
+				
+				
+				
+			}
+			@Test
+			void should_ReturnCoderWithWorstBMIInMs_When_coderListHas10000Elements2() {
+				
+				// given
+				assumeTrue(BMICalculatorTest.this.environment.equals("prod"));  // when enviroment is different it will Skip
+				List<Coder> coders=new ArrayList<>();
+				
+				for(int i=0;i<=10000;i++) {
+					
+				coders.add(new Coder(1.0+i, 10+i));
+				}
+				// when
+				Executable excutable=()->BMICalculator.findCoderWithWorstBMI(coders);
+				
+				// then
+				assertTimeout(Duration.ofMillis(500), excutable);	
+			}
+			
+			@Test
+			void should_returnNullworstBMI_When_CoderListEmpty() {
+				// given
+				List<Coder> coders=new ArrayList<>();
+				
+
+				// when
+		     Coder coderWorstBMI=BMICalculator.findCoderWithWorstBMI(coders);
+				// then
+		    assertNull(coderWorstBMI);
+			}
+			
+		 
+	 }
+	 @Nested
+		class GetBMIScoresTest{
+		 
+		 @Test
+			void should_returnCorrectBMIScoreArray_When_CoderListNotEmpty() {
+				// given
+				List<Coder> coders=new ArrayList<>();
+				coders.add(new Coder(1.80,60.0));
+				coders.add(new Coder(1.82,98.0));
+				coders.add(new Coder(1.82,64.7));
+				
+				double[] excepted= {18.52,29.59,19.53};
+				
+
+				// when
+		     double[] bmiScores=BMICalculator.getBMIScores(coders);
+				// then
+		    assertArrayEquals(excepted,bmiScores);
+			}
+			
+		 
+	 }
+			 
+	
+	
+	
+	
+
+}

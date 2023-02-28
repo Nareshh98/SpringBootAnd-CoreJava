@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body bgcolor="indianred">
+<h1>Movie Details</h1> 
+  
+
+<table border="1">
+<tr th:each="movie: ${movies}" >
+    <td th:text="${movie.movieName}"></td>
+    <td th:text="${movie.movieActor}"></td>
+</tr>
+</table>
+</body>
+</html>

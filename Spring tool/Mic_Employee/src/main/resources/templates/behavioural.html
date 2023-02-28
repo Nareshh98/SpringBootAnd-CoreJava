@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Behavioural Assessment</title>
+<style>
+body {background:rgba(231, 183, 144, 0.5);}
+.main {text-align:center;margin:0 auto;width:50%;}
+</style>
+</head>
+<body>
+<div class="main">
+<h1>Behavioral Assessment registration</h1>
+<form name="add" action="/addBehaviouralData" method="POST">
+<table border="1">
+ 
+<tr><td>userId</td><td><input type="text" name="userId" required/></td></tr>
+<tr><td>assessment</td><td><select id="subject" name="subject">
+<option value="Step Plus">Step Plus</option>
+<option value="Email Etiquette">Email Etiquette</option>
+<option value="Learning Agility">Learning Agility</option>
+
+</select></td></tr>
+<tr><td>Date</td><td><input type="date" id="assDate" name="assDate"></td></tr>
+<tr><td>type</td><td><select id="type" name="type">
+<option value="Behavioural">Behavioural</option> 
+</td></tr>
+<tr><td colspan="2"><input type="submit" name="submit" value="submit"/></td></tr>
+</table>
+</form>
+</div>
+</body>
+</html>

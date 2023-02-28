@@ -1,0 +1,62 @@
+package junitByusingJAVA.test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class PraticingTestCases {
+
+	@Test
+	void test() {
+		int[] excepted= {1,2,3,4};
+		int[] actual= {1,2,3,4};
+		
+		assertArrayEquals(excepted,actual,"testcase failed");
+		//this is the text will show when it fails in first line
+		
+	}
+	@Test
+	void test2() {
+		String a="xyz";
+		String b="xyz";
+		
+		assertSame(a,b);	
+	}
+	@Test
+	void test3() {
+		String a="xyz";
+		String b="xyzz";
+		
+		assertNotSame(a,b);	
+	}
+	@Test
+	void test4() {
+		String a=null;
+		
+		assertNull(a);
+	}
+	@Test
+	void test5() {
+		String a="abc";
+		
+		assertNotNull(a);
+	}
+	@Test
+	void test6() {
+		int a=30;
+		int b=20;
+		
+		assertTrue(a>b);
+		assertFalse(a<b);
+	}
+	@Test
+	void test7() {
+		int a=30;
+		int b=20;
+		
+		assertTrue(a>b);
+		assertFalse(a<b);
+	}
+	
+	
+}

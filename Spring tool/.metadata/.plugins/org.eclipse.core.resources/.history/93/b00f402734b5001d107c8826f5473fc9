@@ -1,0 +1,16 @@
+package com.healthycoderapp;
+
+public class AcitvityCalculater {
+	
+	
+	public static String Work_Outs(int weeklyCardioMin,int weeklyWorkoutSessions) {
+			
+		if()
+		
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ 
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+span {background-color:white;}
+</style>
+</head>
+ 
+<body bgcolor="indianred">
+<h1>Employee Details</h1>
+<table border="1">
+<tr>
+<th>User Id</th>
+<th>Subject</th>
+<th>Date</th>
+<th>Type</th>
+</tr>
+<tr th:each="assessment: ${registerations}">
+<td th:text="${assessment.userId}"></td>
+<td th:text="${assessment.assessment}"></td>
+<td th:text="${assessment.assDate}"></td>
+<td th:text="${assessment.type}"></td>
+</tr>
+</table>
+</body>
+</html>

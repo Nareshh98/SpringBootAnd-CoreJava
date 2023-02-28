@@ -1,0 +1,14 @@
+package com.healthycoderapp;
+
+public class AcitvityCalculater {
+	
+	
+	public void Work_Outs(int WorkOuts) {
+		
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test02DefaultReturnValues.should_countAvaliablePlaces" project="HappyHotelApp_mockito" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.mockitotutorial.happyhotel.booking.Test02DefaultReturnValues" time="0.635" displayname="Test02DefaultReturnValues" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test02DefaultReturnValues]">
+    <testcase name="should_countAvaliablePlaces" classname="com.mockitotutorial.happyhotel.booking.Test02DefaultReturnValues" time="0.635" displayname="should_countAvaliablePlaces()" uniqueid="[engine:junit-jupiter]/[class:com.mockitotutorial.happyhotel.booking.Test02DefaultReturnValues]/[method:should_countAvaliablePlaces()]"/>
+  </testsuite>
+</testrun>
